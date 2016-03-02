@@ -82,7 +82,7 @@ Python exec prefix: /usr
 Test: time module
 <module 'time' from '/output/python2.7/lib-dynload/time.dll'> /output/python2.7/lib-dynload/time.dll
 __doc__             This module provides various functi...
-__file__            /output/python2.7/lib-dynload/time.ll
+__file__            /output/python2.7/lib-dynload/time.dll
 __name__            time
 __package__         None
 accept2dyear        1
