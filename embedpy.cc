@@ -13,15 +13,21 @@ int main(int argc, char *argv[]) {
   cout << "Python prefix: " << (Py_GetPrefix()) << endl;
   cout << "Python exec prefix: " << (Py_GetExecPrefix()) << endl;
   
-  cout << "Test: time, ctime module" << endl;
-  PyRun_SimpleString("from time import time,ctime\n"
-                     "print 'Today is',ctime(time())\n");
+  cout << "------------------" << endl;
   
-  cout << "Test: decoding hex" << endl;
-  PyRun_SimpleString("print '7FF80000000000007FF0000000000000'.decode('hex')");
+  cout << "Test: time module" << endl;
+  PyRun_SimpleString("\nimport time as mod; print mod, mod.__file__"
+                     "\nfor x in dir(mod):\n"
+                     "\n  print '{:20s}{}'.format(x, str(getattr(mod, x, ''))[0:35])"
+                     );
   
-  cout << "Test binascii module" << endl;
-  PyRun_SimpleString("import binascii");
+  cout << "------------------" << endl;
+  
+  cout << "Test: binascii module" << endl;
+  PyRun_SimpleString("\nimport binascii as mod; print mod, mod.__file__"
+                     "\nfor x in dir(mod):\n"
+                     "\n  print '{:20s}{}'.format(x, str(getattr(mod, x, ''))[0:35])"
+                     );
   
   Py_Finalize();
   return 0;
