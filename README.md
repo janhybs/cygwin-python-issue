@@ -20,8 +20,11 @@ Python path: /usr/lib/python27.zip:/usr/lib/python2.7/:/usr/lib/python2.7/plat-c
 Python prefix: /usr
 Python exec prefix: /usr
 ------------------
+Python version
+sys.version_info(major=2, minor=7, micro=10, releaselevel='final', serial=0)
+------------------
 Test: time module
-<module 'time' from '/usr/lib/python2.7/lib-dynload/time.dll'> /usr/lib/python2.7/lib-dynload/time.dll
+(<module 'time' from '/usr/lib/python2.7/lib-dynload/time.dll'>, '/usr/lib/python2.7/lib-dynload/time.dll')
 __doc__             This module provides various functi...
 __file__            /usr/lib/python2.7/lib-dynload/time.dll
 __name__            time
@@ -45,7 +48,7 @@ tzname              ('CET', 'CEST')
 tzset               <built-in function tzset>
 ------------------
 Test: binascii module
-<module 'binascii' from '/usr/lib/python2.7/lib-dynload/binascii.dll'> /usr/lib/python2.7/lib-dynload/binascii.dll
+(<module 'binascii' from '/usr/lib/python2.7/lib-dynload/binascii.dll'>, '/usr/lib/python2.7/lib-dynload/binascii.dll')
 Error               <class 'binascii.Error'>
 Incomplete          <class 'binascii.Incomplete'>
 __doc__             Conversion between binary data and...
@@ -68,9 +71,10 @@ hexlify             <built-in function hexlify>
 rlecode_hqx         <built-in function rlecode_hqx>
 rledecode_hqx       <built-in function rledecode_hqx>
 unhexlify           <built-in function unhexlify>
+
 ```
 
-Windows `wrapper.bat`:
+Windows `wrapper27.bat`:
 ```
 Could not find platform independent libraries <prefix>
 Could not find platform dependent libraries <exec_prefix>
@@ -79,8 +83,11 @@ Python path: output/python2.7:output/python2.7/lib-dynload:/usr/lib/python27.zip
 Python prefix: /usr
 Python exec prefix: /usr
 ------------------
+Python version
+sys.version_info(major=2, minor=7, micro=10, releaselevel='final', serial=0)
+------------------
 Test: time module
-<module 'time' from '/output/python2.7/lib-dynload/time.dll'> /output/python2.7/lib-dynload/time.dll
+(<module 'time' from '/output/python2.7/lib-dynload/time.dll'>, '/output/python2.7/lib-dynload/time.dll')
 __doc__             This module provides various functi...
 __file__            /output/python2.7/lib-dynload/time.dll
 __name__            time
