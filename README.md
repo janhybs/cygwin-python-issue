@@ -3,18 +3,20 @@ Demonstration of cygwin's Embedded Python error
 
 ## HOWTO
 
+Tutorial for python version 2.7 (for version 3.4 replace all `"27"` with `"34"`). Issue is present in both version 2.7 and 3.4 where one dll file such as `time.dll` is imported but other dll `binascii.dll` which is in the same dir as `time.dll` yeilds import error.
+
 ### Under cygwin
-1. run ` make all`
-2. copy out all dependencies (DLLs) to `output` folder, you can use `make ldd` to find out what to copy
+1. run ` make all27`
+2. copy out all dependencies (DLLs) to `output` folder, you can use `make ldd27` to find out what to copy
 3. copy whole python2.7 folder from `/usr/lib/python2.7/` to `output` folder
 
 ### Under Windows
- 1. run wrapper.bat
+ 1. run wrapper27.bat
 
 ### Conclusion
 Result should differ:
 
-Cygwin `./output/embedpy`:
+Cygwin `./output/embedpy27`:
 ```bash
 Python path: /usr/lib/python27.zip:/usr/lib/python2.7/:/usr/lib/python2.7/plat-cygwin:/usr/lib/python2.7/lib-tk:/usr/lib/python2.7/lib-old:/usr/lib/python2.7/lib-dynload
 Python prefix: /usr
